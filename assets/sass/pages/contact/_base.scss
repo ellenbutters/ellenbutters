@@ -1,0 +1,60 @@
+#contact{
+
+  section.main{
+    @include clearfix;
+    position: relative;
+    padding: 60px 0;
+
+    .contact{
+
+      p{
+        color:#ccc;
+        margin: 20px 0;
+      }
+
+      [class^="icon-"]{
+        font-size: 236%;
+        display: inline-block;
+        margin: 5px 5px 20px 5px;
+        color: #007bb5;
+        @include border-radius(6px);
+        position:relative;
+        background: white;
+        line-height: 0.4;
+        cursor: pointer;
+
+        &.icon-connect-twitter{
+          color: #55acee;
+        }
+      }
+
+      h4{
+        text-transform: uppercase;
+        color: #eee;
+        font-size: 39px;
+        margin: 0 0 15px 0;
+        &.last{
+          margin: 40px 0 0 0;
+        }
+      }
+
+      a{
+        font-size: 30px;
+        color: darken($color-main, 8%);
+        font-family: "FranklinGothicLTCom-BkCn";
+        text-decoration: none;
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+    }
+
+    @include media(0,850){
+      .contact{
+        padding: 0 20px;
+      }
+    }
+
+  }
+
+}

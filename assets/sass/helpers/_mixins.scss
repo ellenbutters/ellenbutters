@@ -1,0 +1,22 @@
+@mixin clearfix{
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin roundedHQBorders($color, $radius){
+  position:relative;
+  &:before{
+    content: "";
+    border: 1px solid $color;
+    width: 200%;
+    height: 200%;
+    position:absolute;
+    left: -50%;
+    top: -50%;
+    @include scale(0.5);
+    @include border-radius($radius);
+  }
+}

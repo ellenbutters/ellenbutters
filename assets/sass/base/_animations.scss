@@ -1,0 +1,83 @@
+@include keyframes(slideInUp){
+  0% {
+    opacity:0;
+    @include translate3d(0, 100px, 0);
+  }
+  100% {
+    @include translate3d(0, 0, 0);
+    opacity:1;
+  }
+}
+
+@include keyframes(fadeIn){
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@include keyframes(fadeOut){
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@include keyframes(rotation){
+  from {
+    @include rotate(0deg);
+  }
+  to {
+    @include rotate(359deg);
+  }
+}
+
+@include keyframes(poppin){
+  0% {
+    @include scale3d(0.7, 0.7);
+    opacity:0;
+  }
+  60% {
+    @include scale3d(1.1, 1.1);
+    opacity:1;
+  }
+  100% {
+    @include scale3d(1, 1);
+    opacity:1;
+  }
+}
+
+
+@include keyframes(shrinkAndFadeOut){
+  from {
+    @include scale3d(1, 1);
+    opacity:1;
+  }
+  to {
+    @include scale3d(0.75, 0.75);
+    opacity:0;
+  }
+}
+
+
+@mixin fadeIn($duration){
+  @include animation(fadeIn $duration);
+}
+
+@mixin fadeOut{
+  @include animation(fadeOut 0.15s);
+  -webkit-animation-fill-mode: forwards;
+}
+
+@mixin rotation{
+  @include animation(rotation 2s infinite linear);
+}
+
+@mixin poppin{
+  @include animation(poppin 0.3s);
+  -webkit-animation-timing-function: ease-in-out;
+}

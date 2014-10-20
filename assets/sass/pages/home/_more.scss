@@ -1,0 +1,138 @@
+#home section.more{
+
+  background: #fffdb6;
+  text-align:center;
+  margin: 42px 0 0 0;
+
+  @include media(600){
+    margin: 58px 0 0 0;
+  }
+
+  @include media(950){
+    margin: 68px 0 0 0;
+  }
+
+  .grid-container{
+    padding: 20px;
+    @include clearfix;
+    @include media(1000){
+      padding: 40px 20px 20px 20px;
+    }
+  }
+
+  [class^="icon-"]{
+    font-size: 236%;
+    display: inline-block;
+    margin: 5px 5px 20px 5px;
+    color: #007bb5;
+    @include border-radius(6px);
+    position:relative;
+    background: white;
+    line-height: 0.6;
+    cursor: pointer;
+
+    &.icon-connect-twitter{
+      color: #55acee;
+    }
+  }
+
+  h2{
+    border: none;
+    background: #191919;
+    padding: 0;
+    margin: -54px 0 0 0;
+    @include box-sizing(border-box);
+    position: absolute;
+
+    &:after{
+      border-color: #191919 transparent transparent transparent;
+      left: 50%;
+      bottom: -12px;
+      margin: 0 0 0 -8px;
+      border-width: 15px 15px 0 15px;
+    }
+
+    @include media(600){
+      margin: -64px 0 0 0;
+    }
+
+    @include media(1000){
+      margin: -94px 0 0 0;
+      &:after{
+        bottom: -14px;
+        margin: 0 0 0 -13px;
+        border-width: 15px 15px 0 15px;
+      }
+    }
+  }
+
+  h3,h4{
+    font-family: 'FranklinGothicLTCom-MdCn', helvetica, sans-serif;
+    color: darken(#b8b547, 8%);
+    text-transform: uppercase;
+    position:relative;
+    font-size:150%;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px 0;
+  }
+
+  h4{
+    text-align: center;
+    font-size: 140%;
+  }
+
+  h6{
+    font-family: "FranklinGothicLTCom-MdCn", helvetica, sans-serif;
+    color: #9b983c;
+    text-transform: none;
+    position: relative;
+    font-size: 97%;
+    letter-spacing: -0.01em;
+    text-align: left;
+    margin: 4px 0 10px 0;
+    font-weight: normal;
+  }
+
+  p{
+    text-align: left;
+    color: #555;
+    font-size: 96%;
+    margin: 0 0 25px 0;
+  }
+
+  img{
+    display: inline-block;
+    @include border-radius(200px);
+    overflow: hidden;
+    border: 3px solid #b8b547;
+    width: 70%;
+    max-width: 200px;
+    margin: 18px;
+  }
+
+  .profile{
+    @include media(600){
+      margin: 0 30px 0 0;
+      img{
+        width: 100%;
+        max-width: 190px;
+        margin: 0;
+      }
+    }
+    @include media(1000){
+      img{
+        max-width: 251px;
+      }
+    }
+  }
+
+  @include media(700){
+    .profile, .content{
+      float: left;
+    }
+    .content{
+      width:64%;
+    }
+  }
+
+}

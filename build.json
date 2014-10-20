@@ -1,0 +1,33 @@
+{
+    "js": [
+
+
+        "assets/js/html5shiv.min.js",
+        "assets/js/console.js",
+        "assets/js/jquery-2.0.3.min.js",
+        "assets/js/ba-routematcher.min.js",
+        "assets/js/modernizr.js",
+        "assets/js/Mustache.js",
+        "assets/js/HairyMustache.js",
+        "assets/js/cookies.js",
+        "assets/js/hammer.js",
+        "assets/js/jquery.hammer.js",
+        "assets/js/PointerEvents.js",
+        "assets/js/imagesloaded.pkgd.min.js",
+        "assets/js/SimpleTouchSlider.js",
+
+
+        "assets/js/settings.js",
+
+
+        "assets/js/utilities.js",
+        "assets/js/utilities.router.js",
+        "assets/js/app.js",
+        "assets/js/controller.js",
+
+
+        "assets/js/viewhelpers/home.js"
+
+
+    ]
+}

@@ -1,0 +1,60 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2816099, 2014-05-21T14:41:40-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: ITC Franklin Gothic Demi Compressed by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-franklin-gothic/demi-compressed/
+ * Licensed pageviews: 500,000
+ * 
+ * Webfont: ITC Franklin Gothic Demi Condensed by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-franklin-gothic/demi-condensed/
+ * Licensed pageviews: 500,000
+ * 
+ * Webfont: ITC Franklin Gothic Book by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-franklin-gothic/book/
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: ITC Franklin Gothic Book Condensed by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-franklin-gothic/book-condensed/
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: ITC Franklin Gothic Medium Condensed by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-franklin-gothic/medium-condensed/
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: ITC Franklin Gothic Book Extra Compressed by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-franklin-gothic/book-extra-compressed/
+ * Licensed pageviews: 250,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2816099
+ * Webfonts copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted &#x00A9; 2004 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype GmbH, and may not be repro
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2af863");
+
+/* @font-face {font-family: 'FranklinGothicLTCom-DmCm';src: url('../fonts/2AF863_0_0.eot');src: url('../fonts/2AF863_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2AF863_0_0.woff') format('woff'),url('../fonts/2AF863_0_0.ttf') format('truetype');} */
+ 
+  
+@font-face {font-family: 'FranklinGothicLTCom-DmCn';src: url('../fonts/2AF863_1_0.eot');src: url('../fonts/2AF863_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2AF863_1_0.woff') format('woff'),url('../fonts/2AF863_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FranklinGothicLTCom-Bk';src: url('../fonts/2AF863_2_0.eot');src: url('../fonts/2AF863_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2AF863_2_0.woff') format('woff'),url('../fonts/2AF863_2_0.ttf') format('truetype');}
+ 
+ @font-face {font-family: 'FranklinGothicLTCom-BkCn';src: url('../fonts/2AF863_3_0.eot');src: url('../fonts/2AF863_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2AF863_3_0.woff') format('woff'),url('../fonts/2AF863_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FranklinGothicLTCom-MdCn';src: url('../fonts/2AF863_4_0.eot');src: url('../fonts/2AF863_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2AF863_4_0.woff') format('woff'),url('../fonts/2AF863_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FranklinGothicLTCom-BkXCm';src: url('../fonts/2AF863_5_0.eot');src: url('../fonts/2AF863_5_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2AF863_5_0.woff') format('woff'),url('../fonts/2AF863_5_0.ttf') format('truetype');}

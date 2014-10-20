@@ -1,0 +1,27 @@
+@mixin spinner{
+  display: block;
+  width: 100px;
+  height: 100px;
+  z-index: 300;
+  @include rotation;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin: -50px 0 0 -50px;
+  background:url('../img/spinner.png') center center no-repeat;
+  background-size:cover;
+}
+
+#loading-overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:9999999;
+  background: rgba(0,0,0,0.4);
+  @include fadeIn(0.5s);
+  i{
+    @include spinner;
+  }
+}

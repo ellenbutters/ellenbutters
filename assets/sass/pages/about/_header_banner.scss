@@ -1,0 +1,61 @@
+#about{
+  .header_banner{
+
+    background: #454954;
+    background-size: contain;
+    position: relative;
+
+    .img{
+      clear: both;
+      background: url('../img/header_about_small.jpg') center center no-repeat;
+      background-size: cover;
+      padding: 34%;
+
+      @include media(500){
+        background: url('../img/header_about.jpg') center center no-repeat;
+        background-size: cover;
+        height: 300px;
+        padding: 0;
+      }
+
+      @include media(900){
+        background-size: auto 375px;
+        height: 375px;
+      }
+    }
+
+
+
+    .grid-container{
+      margin:-75px auto 0 auto;
+      height: 75px;
+      position: relative;
+
+      h1{
+        text-transform: uppercase;
+        color: white;
+        margin: 0;
+        font-size: 57px;
+      }
+
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        border-color: transparent transparent #191919 transparent;
+        left: 130px;
+        bottom: 0;
+        margin: 0;
+        border-width: 0 10px 10px 10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+
+      @include media(0,800){
+        padding-left: 30px;
+      }
+    }
+
+  }
+}

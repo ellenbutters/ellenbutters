@@ -1,0 +1,104 @@
+ul.nav{
+  float:right;
+  @include clearfix;
+  line-height: 45px;
+  li{
+    font-family: $font-title;
+    cursor:pointer;
+    float: left;
+    text-transform: uppercase;
+    padding: 0 15px;
+    font-size:90%;
+    @include transition(all 0.1s ease-in-out);
+    position:relative;
+    letter-spacing: 0.05em;
+
+    @include media(600){
+      font-size: 80%;
+      padding: 0 20px;
+    }
+
+    .no-touch &{
+      &:hover{
+        color: #726818
+      }
+    }
+
+    &.download{
+      background: #191919;
+      color: white;
+      .no-touch &{
+        &:hover{
+          background: #726818;
+          color: white;
+        }
+      }
+    }
+
+    i{
+      margin: 0 3px 0 0;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  }
+}
+
+header, footer{
+  @include clearfix;
+  p{
+    display: none;
+    float: left;
+    line-height: 45px;
+    padding: 0 0 0 15px;
+    font-family: 'FranklinGothicLTCom-MdCn', helvetica, sans-serif;
+    color: darken(#b8b547, 8%);
+    text-transform: uppercase;
+    position:relative;
+    font-size:122%;
+    letter-spacing: -0.01em;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover{
+      color: darken(#b8b547, 20%);
+    }
+
+    @include media(450){
+      display:block;
+    }
+  }
+  nav{
+    background: #fffdb3;
+    border-bottom: 2px solid #a39319;
+    @include clearfix;
+  }
+}
+
+footer{
+  nav{
+    background: black;
+    @include clearfix;
+    border:none;
+    ul.nav{
+      li{
+        color: white;
+        &.download{
+          background: #726818;
+        }
+        .no-touch &{
+          &:hover{
+            color: white;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    p{
+      color: white;
+      &:hover{
+        color:#ddd;
+      }
+    }
+  }
+}

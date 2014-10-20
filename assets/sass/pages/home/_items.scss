@@ -1,0 +1,129 @@
+#home{
+  .item{
+    clear: both;
+    margin: 0 0 10px 0;
+    position:relative;
+    overflow:hidden;
+
+    > h3{
+      background: #262626;
+      padding: 5px 35px 5px 80px;
+      position:relative;
+      font-size: 100%;
+      font-weight: normal;
+      min-height: 50px;
+      @include transition(background 0.2s ease-in-out);
+
+      @include media(600){
+        padding: 10px 35px 10px 87px;
+        min-height: 59px;
+      }
+
+    }
+
+    &.expandable{
+      > h3{
+        .no-touch &:hover{
+          background: #313131;
+        }
+      }
+    }
+
+    &.active{
+      > h3{
+        background: #313131;
+      }
+    }
+
+    .years{
+      font-family: 'FranklinGothicLTCom-BkXCm';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 68px;
+      color: #fffc84;
+      font-size: 196%;
+      border-right: 3px solid #191919;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 5px 8px;
+      line-height: 0.8em;
+
+      @include media(600){
+        font-size: 200%;
+        padding: 9px 8px;
+        width: 76px;
+      }
+    }
+
+    div.title{
+      p{
+        margin:0;
+        padding:0;
+        &.title{
+          font-family: $font-title;
+          color: white;
+          font-size: 141%;
+          margin:0 0 6px 0;
+          line-height: 22px;
+          @include media(600){
+            font-size: 151%;
+          }
+        }
+        &.meta{
+          font-weight: normal;
+          color: #aaa;
+          font-size: 90%;
+        }
+      }
+      > ul{
+        li{
+          display: list-item;
+          list-style: square inside none;
+          color: #999;
+          font-size: 95%;
+        }
+      }
+    }
+
+    &.expanded.expandable{
+      div.title{
+        &:after{
+          content: 'd';
+        }
+      }
+    }
+
+    &.expandable{
+
+      .no-touch &{
+        cursor: pointer;
+      }
+
+      div.title{
+        &:after{
+          content: 'a';
+          font-size: 116%;
+          font-family: "butters-icons";
+          position: absolute;
+          left: auto;
+          right: 7px;
+          top: 50%;
+          margin: -25px 0 0 0;
+          color: #fffc84;
+          line-height: 50px;
+          height: 50px;
+          font-weight: normal;
+
+          @include media(600){
+            font-size: 150%;
+            right: 14px;
+          }
+        }
+      }
+    }
+
+  }
+}

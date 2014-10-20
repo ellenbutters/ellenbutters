@@ -1,0 +1,85 @@
+#home{
+  .header_banner{
+
+    background: url('../img/header_home_grad.png') center center repeat-x, #efe68b;
+    background-size: contain;
+    position: relative;
+
+    .img{
+      clear: both;
+      background: url('../img/header_home_small2.jpg') center center no-repeat;
+      background-size: cover;
+      padding: 34%;
+
+      @include media(500){
+        background: url('../img/header_home.png') center center no-repeat;
+        background-size: cover;
+        height: 300px;
+        padding: 0;
+      }
+
+      @include media(900){
+        background-size: auto 375px;
+        height: 375px;
+      }
+    }
+
+    a#fastcompany{
+      display: none;
+      background: #fffec5;
+      width: 295px;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      border: 2px solid #b5b147;
+      border-bottom: none;
+      border-right: none;
+      padding: 10px 50px 10px 10px;
+      font-size: 20px;
+      font-family: "FranklinGothicLTCom-MdCn", helvetica, arial, sans-serif;
+      @include box-sizing(border-box);
+      @include transition(all 0.2s);
+
+      &, &:active{
+        color: black;
+        text-decoration: none;
+      }
+
+      &:hover{
+        border:2px solid #888427;
+        border-bottom:none;
+        border-right:none;
+        text-decoration: none;
+        &:after{
+          color: #968f3c;
+        }
+      }
+
+      img{
+        float: left;
+        margin: 0 20px 0 0;
+      }
+
+      &:after{
+        @include transition(all 0.2s);
+        content: 'b';
+        font-size: 51px;
+        font-family: "butters-icons";
+        position: absolute;
+        left: auto;
+        right: 7px;
+        top: 50%;
+        margin: -25px 0 0 0;
+        color: #aca53e;
+        line-height: 50px;
+        height: 50px;
+        font-weight: normal;
+      }
+
+      @include media(1200){
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+#home .item .slider{
+  overflow: hidden;
+  width:100%;
+  -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+  -webkit-transform-style: preserve-3d;
+  @include opacity(0);
+  cursor: auto;
+
+  &.loaded{
+    @include fadeIn(1.2s);
+    @include opacity(1);
+  }
+
+  ul{
+    @include clearfix;
+    transform: translate3d(0%,0,0) scale3d(1,1,1);
+    -webkit-transform: translate3d(0%,0,0) scale3d(1,1,1);
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+    height:100%;
+
+    li{
+      float: left;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: translate3d(0,0,0);
+      width:100%;
+      padding: 15px 10px;
+      @include box-sizing(border-box);
+      position: relative;
+
+      @include media(500){
+        padding: 15px 25px;
+      }
+
+      @include media(950){
+        padding: 20px 65px;
+      }
+
+      @include media(1300){
+        padding: 30px 0 40px 0;
+      }
+
+      //the big thumbnail image
+      .img{
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 10px auto;
+        position: relative;
+
+        @include media(500){
+          margin: 0 auto 20px auto;
+        }
+
+        @include media(600){
+          cursor: pointer;
+        }
+
+        @include media(1000){
+          float: left;
+          margin: 0 0 40px 1px;
+          width: 50%;
+          max-width: 650px;
+        }
+
+        img{
+          width: 100%;
+          -webkit-user-drag: none;
+          @include fadeIn(0.4s);
+        }
+
+        //the plus button
+        .enlarge{
+          position: absolute;
+          display: none;
+          width:40px;
+          height:40px;
+          background: #7d7504;
+          cursor: pointer;
+          line-height:40px;
+          text-align:center;
+          top:0;
+          left: 100%;
+          margin: 0;
+          color:white;
+          @include transition(all 0.2s);
+          @include fadeIn(0.4s);
+
+          &:before{
+            line-height: 40px;
+          }
+
+          &:hover{
+            background: white;
+            color:#7d7504;
+          }
+
+          @include media(600){
+            display: block;
+          }
+        }
+      }
+
+      .content{
+
+        @include media(1000){
+          float: right;
+          width: 41%;
+          margin: 50px 0 20px 0;
+        }
+
+        p{
+          color: #b4b4b4;
+          margin: 0 0 10px 0;
+          font-size: 91%;
+
+          @include media(1000){
+            font-size: 80%;
+            line-height: 1.2;
+          }
+
+          @include media(1300){
+            font-size: 95%;
+            line-height: 1.2;
+          }
+        }
+
+        h3{
+          color: white;
+          background: none;
+          text-transform: uppercase;
+          font-size: 96%;
+          margin: 0 0 10px 0;
+          padding: 0;
+          min-height: 0;
+
+          @include media(1000){
+            font-size: 110%;
+          }
+        }
+
+        //bulleted lists
+        ul{
+          display: block;
+          margin: 0;
+          padding: 0 0 0 19px;
+          @include box-sizing(border-box);
+          li{
+            display: list-item;
+            list-style: disc outside none;
+            margin: 0 0 10px 0;
+            padding: 0;
+            color: #b4b4b4;
+            font-size: 95%;
+
+            @include media(1000){
+              font-size: 80%;
+            }
+
+            @include media(1300){
+              font-size: 95%;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    &.animate{
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+  }
+}
+
+#slider-position{
+  position: absolute;
+  bottom:0;
+  z-index: 40;
+  height: 15px;
+  overflow: visible;
+  margin: 0;
+  @include transition(all 0.1s);
+
+  @include media(900){
+    bottom: 7px;
+  }
+
+  li{
+    background: darken($color-main, 60%);
+    @include border-radius(15px);
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    float: left;
+    display: block;
+    @include fadeIn(0.9s);
+
+    &.selected{
+      background: $color-main;
+    }
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+
+.controls{
+  display: none;
+  cursor: pointer;
+  background: #fffc84;
+  color: #191919;
+  font-size: 200%;
+  width: 45px;
+  height: 75px;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  z-index: 999;
+  line-height: 75px;
+  text-align: center;
+  @include transition(all 0.1s);
+  @include fadeIn(0.9s);
+
+  &:before{
+    line-height: 75px;
+  }
+
+  &:hover{
+    background:white;
+    color:#191919;
+  }
+
+  &.next{
+    left: auto;
+    right: 0;
+  }
+
+  .no-touch &{
+    @include media(600){
+      display: block;
+    }
+    @include media(950){
+      font-size: 220%;
+      width: 60px;
+      height: 85px;
+      line-height: 85px;
+      &:before{
+        line-height: 85px;
+      }
+    }
+  }
+}
