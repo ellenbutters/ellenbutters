@@ -2,6 +2,7 @@ HM.ViewHelper = (function(my){
     my.home = function(data){
 
         var $scope = this;
+        var timeout;
 
         /**
          * Stuff to do once DOM loads (init slider, etc.)
@@ -65,7 +66,7 @@ HM.ViewHelper = (function(my){
             var $img_div = $(this);
             $('body').prepend('<div id="modal_overlay"></div><div id="modal"><img src="' + $img_div.data('modal') + '" /><i class="close icon-img-close"></i></div>');
 
-           setTimeout(function(){
+           timeout = setTimeout(function(){
                var $modal = $('#modal');
                $modal.imagesLoaded().always(function(){
 
@@ -112,8 +113,10 @@ HM.ViewHelper = (function(my){
                 duration:300
             });
 
+            clearTimeout(timeout);
+
             //wait for animation to finish, then load template.
-            setTimeout(function(){
+            timeout = setTimeout(function(){
                 Utilities.showLoading();
 
                 //load slider HTML via AJAX
@@ -192,6 +195,7 @@ HM.ViewHelper = (function(my){
          * @param $item
          */
         function collapse($item){
+            clearInterval(timeout);
             $item.find('.slider, #slider-position').remove();
             $('.controls').remove();
             $item.removeClass('expanded');

@@ -21,9 +21,9 @@ Application.init = function(){
 
         // PointerEvents
         PointerEvents.init({
-            prevent_all_default_events: true,
+            prevent_all_default_events: false,
             debug: false,
-            prevent_all_mouseevents:  Utilities.client.has('touch') ? true : false
+            prevent_all_mouseevents:  false
         });
 
         //load correct page
@@ -53,11 +53,6 @@ Application.init = function(){
             if(routeObj){
                 Utilities.Router.go2(routeObj.id, routeObj.params);
             }
-        });
-
-        $body.on('PointerTap.app', '*[href]', function (e) {
-            e.preventDefault();
-            window.location = $(this).attr('href');
         });
 
         $body.on('PointerTap.app', '*[data-url]', function (e) {

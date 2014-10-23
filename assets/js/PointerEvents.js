@@ -150,7 +150,8 @@ var PointerEvents = (function($){
         var pointertap = jQuery.Event("PointerTap");
         $startTarget = $(e.target);
         pointertap.originalEvent = e;
-        if($(this).data('pointertap') || options.prevent_all_default_events){
+        console.log($startTarget.prop('tagName'));
+        if(($(this).data('pointertap') || options.prevent_all_default_events) && $startTarget.prop('tagName') != 'A'){
             e.preventDefault();
             e.stopPropagation();
         }

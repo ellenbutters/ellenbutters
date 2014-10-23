@@ -92,26 +92,27 @@ h1, h2, h3, h4 {
   h1 a, h2 a, h3 a, h4 a {
     font-family: FranklinGothicLTCom-DmCn, helvetica, arial, sans-serif; }
 
-/* line 77, ../sass/base/_base.scss */
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+/*
+*{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-select: none;
-  -webkit-touch-callout: none; }
-
-/* line 83, ../sass/base/_base.scss */
+  -webkit-touch-callout: none;
+}
+*/
+/* line 85, ../sass/base/_base.scss */
 section {
   display: block; }
 
-/* line 87, ../sass/base/_base.scss */
+/* line 89, ../sass/base/_base.scss */
 .grid-container {
   max-width: 1150px;
   margin: 0 auto; }
   @media only screen and (min-width: 800px) {
-    /* line 87, ../sass/base/_base.scss */
+    /* line 89, ../sass/base/_base.scss */
     .grid-container {
       padding: 0 20px; } }
   @media only screen and (min-width: 950px) {
-    /* line 87, ../sass/base/_base.scss */
+    /* line 89, ../sass/base/_base.scss */
     .grid-container {
       padding: 0 50px; } }
 
@@ -1283,7 +1284,7 @@ footer nav {
 /* line 1, ../sass/pages/home/_more.scss */
 #home section.more {
   background: #fffdb6;
-  text-align: center;
+  text-align: left;
   margin: 42px 0 0 0; }
   @media only screen and (min-width: 600px) {
     /* line 1, ../sass/pages/home/_more.scss */
@@ -1396,24 +1397,35 @@ footer nav {
     width: 70%;
     max-width: 200px;
     margin: 18px; }
-  @media only screen and (min-width: 600px) {
-    /* line 113, ../sass/pages/home/_more.scss */
-    #home section.more .profile {
-      margin: 0 30px 0 0; }
-      /* line 116, ../sass/pages/home/_more.scss */
+  /* line 113, ../sass/pages/home/_more.scss */
+  #home section.more a {
+    text-decoration: none;
+    color: #9b983c;
+    font-weight: bold; }
+    /* line 117, ../sass/pages/home/_more.scss */
+    #home section.more a:hover {
+      color: #76742e; }
+  /* line 122, ../sass/pages/home/_more.scss */
+  #home section.more .profile {
+    text-align: center; }
+    @media only screen and (min-width: 600px) {
+      /* line 122, ../sass/pages/home/_more.scss */
+      #home section.more .profile {
+        margin: 0 30px 0 0; }
+        /* line 126, ../sass/pages/home/_more.scss */
+        #home section.more .profile img {
+          width: 100%;
+          max-width: 190px;
+          margin: 0; } }
+    @media only screen and (min-width: 1000px) {
+      /* line 133, ../sass/pages/home/_more.scss */
       #home section.more .profile img {
-        width: 100%;
-        max-width: 190px;
-        margin: 0; } }
-  @media only screen and (min-width: 1000px) {
-    /* line 123, ../sass/pages/home/_more.scss */
-    #home section.more .profile img {
-      max-width: 251px; } }
+        max-width: 251px; } }
   @media only screen and (min-width: 700px) {
-    /* line 130, ../sass/pages/home/_more.scss */
+    /* line 140, ../sass/pages/home/_more.scss */
     #home section.more .profile, #home section.more .content {
       float: left; }
-    /* line 133, ../sass/pages/home/_more.scss */
+    /* line 143, ../sass/pages/home/_more.scss */
     #home section.more .content {
       width: 64%; } }
 
@@ -1618,13 +1630,13 @@ footer nav {
       #about section.main .contact h4.last {
         margin: 40px 0 0 0; }
     /* line 51, ../sass/pages/about/_base.scss */
-    #about section.main .contact a {
+    #about section.main .contact a.email {
       font-size: 30px;
       color: #fffb5b;
       font-family: "FranklinGothicLTCom-BkCn";
       text-decoration: none; }
       /* line 56, ../sass/pages/about/_base.scss */
-      #about section.main .contact a:hover {
+      #about section.main .contact a.email:hover {
         opacity: 0.7; }
   @media only screen and (min-width: 0px) and (max-width: 850px) {
     /* line 63, ../sass/pages/about/_base.scss */
@@ -1737,13 +1749,13 @@ footer nav {
     #contact section.main .contact h4.last {
       margin: 40px 0 0 0; }
   /* line 41, ../sass/pages/contact/_base.scss */
-  #contact section.main .contact a {
+  #contact section.main .contact a.email {
     font-size: 30px;
     color: #fffb5b;
     font-family: "FranklinGothicLTCom-BkCn";
     text-decoration: none; }
     /* line 46, ../sass/pages/contact/_base.scss */
-    #contact section.main .contact a:hover {
+    #contact section.main .contact a.email:hover {
       opacity: 0.7; }
   @media only screen and (min-width: 0px) and (max-width: 850px) {
     /* line 53, ../sass/pages/contact/_base.scss */
