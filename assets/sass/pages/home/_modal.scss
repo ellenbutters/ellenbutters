@@ -16,11 +16,12 @@
   .close{
     position: absolute;
     display: block;
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
+    font-size: 115%;
     background: #7d7504;
     cursor: pointer;
-    line-height:40px;
+    line-height:50px;
     text-align:center;
     top:0;
     left: 100%;
@@ -29,7 +30,8 @@
     @include transition(all 0.2s);
 
     &:before{
-      line-height: 40px;
+      line-height: 50px;
+      font-size: 115%;
     }
 
     &:hover{
@@ -40,7 +42,7 @@
 }
 
 #modal_overlay{
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.8);
   @include translate(0,0,0);
   z-index: 1000;
   display: none;
