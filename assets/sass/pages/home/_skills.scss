@@ -1,7 +1,28 @@
 #home section.skills{
   .item{
     h3{
-      padding: 8px 35px 8px 17px;
+      padding: 8px 65px 8px 17px;
+      @media (min-width: 0px) and (max-width: 600px){
+        padding: 8px 35px 8px 17px;
+      }
+    }
+    .skillstitle {
+      font-family: $font-title;
+      color: #f2f2f2;
+      font-size: 170%;
+      margin:13px 0 10px 0px;
+      line-height: 1;
+      @include media(600) {
+        font-size: 170%;
+      }
+      @media (min-width: 320px) and (max-width: 599px){
+        font-size: 160%;
+        margin-top: 6px;
+      }
     }
   }
+
+
+
+
 }

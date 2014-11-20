@@ -1,13 +1,17 @@
 #home{
   .item{
     clear: both;
-    margin: 0 0 10px 0;
+    margin: 0 -20px 12px -20px;
     position:relative;
-    overflow:hidden;
+    @media (min-width: 0px) and (max-width: 790px){
+      margin: 0 0 12px 0;
+      overflow:hidden;
+    }
+//    overflow:hidden;
 
     > h3{
       background: #262626;
-      padding: 5px 35px 5px 80px;
+      padding: 8px 35px 12px 80px;
       position:relative;
       font-size: 100%;
       font-weight: normal;
@@ -15,7 +19,12 @@
       @include transition(background 0.2s ease-in-out);
 
       @include media(600){
-        padding: 10px 35px 10px 87px;
+        padding: 10px 5px 10px 77px;
+        min-height: 59px;
+      }
+
+      @media (min-width: 320px) and (max-width: 599px){
+        padding: 5px 5px 10px 57px;
         min-height: 59px;
       }
 
@@ -25,6 +34,9 @@
       > h3{
         .no-touch &:hover{
           background: #313131;
+          &.title{
+            color:white;
+          }
         }
       }
     }
@@ -33,6 +45,7 @@
       > h3{
         background: #313131;
       }
+
     }
 
     .years{
@@ -41,21 +54,29 @@
       left: 0;
       top: 0;
       height: 100%;
-      width: 68px;
+      width: 93px;
       color: #fffc84;
       font-size: 196%;
-      border-right: 3px solid #191919;
+      border-right: 5px solid #191919;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      padding: 5px 8px;
+      padding: 16px 15px 0 15px;
       line-height: 0.8em;
+
+      @media (min-width: 320px) and (max-width: 599px){
+        font-size: 200%;
+        padding: 16px 15px 0 13px;
+        width: 72px;
+      }
 
       @include media(600){
         font-size: 200%;
-        padding: 9px 8px;
-        width: 76px;
+        padding: 16px 15px 0 15px;
+        width: 93px;
       }
+
+
     }
 
     div.title{
@@ -64,26 +85,35 @@
         padding:0;
         &.title{
           font-family: $font-title;
-          color: white;
-          font-size: 141%;
-          margin:0 0 6px 0;
-          line-height: 22px;
+          color: #f2f2f2;
+          font-size: 180%;
+          margin:4px 0 5px 28px;
+          line-height: 1.0;
           @include media(600){
-            font-size: 151%;
+            font-size: 180%;
+          }
+          @media (min-width: 320px) and (max-width: 599px){
+            font-size: 160%;
+            padding-right: 35px;
+            padding-top: 5px;
           }
         }
         &.meta{
-          font-weight: normal;
-          color: #aaa;
-          font-size: 90%;
+          font-family: FranklinGothicLTCom-BkCn;
+          color: #999;
+          line-height: 130%;
+          padding: 0 36px 0 28px;
+          font-size: 120%;
         }
       }
       > ul{
         li{
+          font-family: FranklinGothicLTCom-BkCn;
           display: list-item;
           list-style: square inside none;
           color: #999;
-          font-size: 95%;
+          line-height: 130%;
+          font-size: 120%;
         }
       }
     }
@@ -103,9 +133,15 @@
       }
 
       div.title{
+        &:hover{
+
+          &:after{
+            color: white;
+          }
+        }
         &:after{
           content: 'a';
-          font-size: 116%;
+          font-size: 200%;
           font-family: "butters-icons";
           position: absolute;
           left: auto;
@@ -118,9 +154,10 @@
           font-weight: normal;
 
           @include media(600){
-            font-size: 150%;
-            right: 14px;
+            font-size: 200%;
+            right: 22px;
           }
+
         }
       }
     }

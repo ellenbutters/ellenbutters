@@ -19,8 +19,8 @@
       }
 
       @include media(900){
-        background-size: auto 375px;
-        height: 375px;
+        background-size: auto 400px;
+        height: 400px;
       }
     }
 
@@ -39,7 +39,7 @@
       font-size: 20px;
       font-family: "FranklinGothicLTCom-MdCn", helvetica, arial, sans-serif;
       @include box-sizing(border-box);
-      @include transition(all 0.2s);
+      @include transition(all 0.3s);
 
       &, &:active{
         color: black;
@@ -47,12 +47,13 @@
       }
 
       &:hover{
-        border:2px solid #888427;
+        border:2px solid black;
         border-bottom:none;
+        background: white;
         border-right:none;
         text-decoration: none;
         &:after{
-          color: #968f3c;
+          color: black;
         }
       }
 

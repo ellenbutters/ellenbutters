@@ -45,10 +45,11 @@ ul{
 }
 
 a {
-  font-family: $font-content;
+  font-family: FranklinGothicLTCom-BkCn;
   -webkit-font-smoothing: antialiased;
   &:link, &:visited, &:hover {
-    color: inherit;
+    color: #b8b547;
+    text-decoration: none;
   }
   &:active {
     text-decoration: none;
@@ -70,7 +71,7 @@ h1, h2, h3, h4{
   text-align: left;
   font-weight: normal;
   a{
-    font-family: $font-title;
+    font-family: FranklinGothicLTCom-BkCn, helvetica, arial, sans-serif;
   }
 }
 
@@ -93,6 +94,6 @@ section{
     padding:0 20px;
   }
   @include media(950){
-    padding:0 50px;
+    padding:0 20px;
   }
 }

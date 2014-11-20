@@ -51,13 +51,12 @@ header, footer{
     float: left;
     line-height: 45px;
     padding: 0 0 0 15px;
-    font-family: 'FranklinGothicLTCom-MdCn', helvetica, sans-serif;
+    font-family: 'FranklinGothicLTCom-DmCn', helvetica, sans-serif;
     color: darken(#b8b547, 8%);
     text-transform: uppercase;
     position:relative;
     font-size:122%;
     letter-spacing: -0.01em;
-    font-weight: bold;
     cursor: pointer;
 
     &:hover{
@@ -70,7 +69,7 @@ header, footer{
   }
   nav{
     background: #fffdb3;
-    border-bottom: 2px solid #a39319;
+    border-bottom: 1px solid #a39319;
     @include clearfix;
   }
 }
@@ -79,7 +78,8 @@ footer{
   nav{
     background: black;
     @include clearfix;
-    border:none;
+    border-top: 1px solid #414141;
+    border-bottom: none;
     ul.nav{
       li{
         color: white;
